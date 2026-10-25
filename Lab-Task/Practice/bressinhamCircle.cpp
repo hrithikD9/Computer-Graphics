@@ -17,7 +17,7 @@ void circleDrawing(int x , int y , int decision){
             decision += (4 * x) + 6;
         } else {
             y--;
-            decision += (4 * (x - y)) + 6;
+            decision += (4 * (x - y)) + 10;
         }
     }
 }
