@@ -7,6 +7,21 @@ using ll = long long;
 #define NO cout << "NO\n"
 #define nl '\n'
 
+void circleDrawing(int x , int y , int decision){
+    cout << "The Coordinates are : ";
+    while(y >= x){
+        cout << "(" << x << " , " << y << ") " << " ";
+
+        x++;
+        if(decision < 0){
+            decision += (4 * x) + 6;
+        } else {
+            y--;
+            decision += (4 * (x - y)) + 6;
+        }
+    }
+}
+
 int main()
 {
     int initial_X , initial_Y , rad , decision;
@@ -25,18 +40,7 @@ int main()
     decision = 3 - (2 * rad);
     cout << nl;
 
-    cout << "The Coordinates are : ";
-    while(initial_Y >= initial_X){
-        cout << "(" << initial_X << " , " << initial_Y << ") " << "  ";
-
-        initial_X++;
-        if(decision < 0){
-            decision += (4 * initial_X) + 6;
-        } else {
-            initial_Y--;
-            decision += (4 * (initial_X - initial_Y)) + 6;
-        }
-    }
+    circleDrawing(initial_X , initial_Y , decision);
 
     HeHe;
 }
