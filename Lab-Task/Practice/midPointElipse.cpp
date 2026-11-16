@@ -44,11 +44,12 @@ void region2(int p){
     while(y != 0){
         cout << "(" << x << "," << y << ")" << " ";
         y--;
-        if(p <= 0){
-            x++;
-            p = p2_update(p , 1);
-        } else {
-            p = p2_update(p , -1);
+        if (p <= 0) {
+        x++;
+        p = p2_update(p, 1);
+    }
+    else {
+    p = p2_update(p, -1);
         }
     }
     cout << "(" << x << "," << y << ")" << " ";
